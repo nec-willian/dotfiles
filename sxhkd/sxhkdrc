@@ -122,3 +122,8 @@ super + {Left,Down,Up,Right}
 
 Print
 	flameshot gui
+
+
+super + l
+	dbus-send --type=method_call --dest=org.gnome.ScreenSaver \
+    /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock

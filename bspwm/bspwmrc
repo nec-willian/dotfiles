@@ -4,11 +4,15 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 num_monitors="$(xrandr --query | grep ' connected' | wc -l)"  
 
-bspc monitor HDMI-1 -d I II III
-bspc monitor eDP-1 -d IV V VI
-bspc monitor DP-1 -d VII VIII IX X
+if (($num_monitors > 1)); then
+    bspc monitor HDMI-1 -d I II III
+    bspc monitor eDP-1 -d IV V VI
+    bspc monitor DP-1 -d VII VIII IX X
+else
+    bspc monitor eDP-1 -d I II III IV V VI
+fi
 
-bspc config border_width         0
+bspc config border_width         1
 bspc config window_gap           0
 
 bspc config split_ratio          0.52
