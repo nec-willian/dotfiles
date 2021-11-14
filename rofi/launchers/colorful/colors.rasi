@@ -2,8 +2,12 @@
 
 * {
   al:  #00000000;
-  bg:  #1c252aff;
+  bg:  #0f0c19ff;
   se:  #29363dff;
   fg:  #FFFFFFff;
   ac:  #EC7875ff;
+  spot: #c7d0d0;
+  txt: #ffffffff;
+  prompt: #14102199;
+  selected: #141021ff;
 }
