@@ -16,6 +16,7 @@ configuration {
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
+    
 	sidebar-mode: 					false;
 }
 
@@ -26,11 +27,14 @@ window {
     background-color:               @bg;
     text-color:                     @fg;
 	border:							0px;
+    
 	border-color:					@ac;
-	width:							40%;
-    location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
+    padding: 0px;
+	width:							178px;
+    height:                         215px;
+    location:                       northwest;
+    x-offset:                       30px;
+    y-offset:                       37px;
 }
 
 prompt {
@@ -42,37 +46,38 @@ prompt {
 }
 
 entry {
-    background-color:               @al;
-    text-color:                     @bg;
-    placeholder-color:              @bg;
+    background-color:               @prompt;
+    text-color:                     #ffffff;
+    placeholder-color:              #ffffff88;
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search";
-    padding:                        0.10% 0% 0% 0%;
+    padding:                        5px;
     blink:                          true;
 }
 
 inputbar {
-	children: 						[ prompt, entry ];
-    background-color:               @ac;
-    text-color:                     @bg;
+	children: 						[  entry ];
+    background-color:               @bg;
+    text-color:                     #ffffff;
     expand:                         false;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;
 	border-color:					@ac;
     margin:                         0% 0% 0% 0%;
-    padding:                        1.5%;
+    padding:                        5px;
 }
 
 listview {
     background-color:               @al;
     padding:                        10px;
-    columns:                        5;
-    lines:                          3;
+    columns:                        1;
+    // lines:                          3;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
+    // lines: 1;
 }
 
 mainbox {
@@ -88,13 +93,13 @@ mainbox {
 element {
     background-color:               @al;
     text-color:                     @fg;
-    orientation:                    vertical;
+    // orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        2% 0% 2% 0%;
+    padding:                        5px;
 }
 
 element-icon {
-    size:                           49px;
+    size:                           29px;
     border:                         0px;
     background-color:               transparent;
     horizontal-align: 0.5;
@@ -104,15 +109,15 @@ element-text {
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         0.5% 0.5% -0.5% 0.5%;
+    margin:                         0.5%;
     background-color:               inherit;
     text-color:                     inherit;
 }
 
 element selected {
-    background-color:               @se;
+    background-color:               @selected;
     text-color:                     @fg;
 	border:							0% 0% 0% 0%;
-    border-radius:                  12px;
+    // border-radius:                  12px;
     border-color:                  	@bg;
 }

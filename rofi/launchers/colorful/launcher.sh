@@ -31,17 +31,7 @@ COLORS=('#EC7875' '#FBC02D' '#FDD835' '#42A5F5' '#BA68C8' '#4DD0E1' '#00B19F')
 ACCENT="${COLORS[$(( $RANDOM % 1 ))]}ff"
 
 # overwrite colors file
-cat > $dir/colors.rasi <<- EOF
-	/* colors */
 
-	* {
-	  al:  $ALPHA;
-	  bg:  $BG;
-	  se:  $SELECT;
-	  fg:  $FG;
-	  ac:  $ACCENT;
-	}
-EOF
 
 # comment these lines to disable random style
 # themes=($(ls -p --hide="launcher.sh" --hide="colors.rasi" $dir))
